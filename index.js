@@ -8,6 +8,7 @@ function getImages(page = 1, perPage = 15) {
     .then(response => response.json())
     .then(data => {
         const list = document.querySelector(".list");
+        
         data.hits.forEach((ree) => {
             const img = document.createElement("img");
             img.classList.add("image");
