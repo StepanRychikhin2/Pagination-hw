@@ -9,13 +9,13 @@ function getImages(page = 1, perPage = 15) {
     .then(data => {
         const list = document.querySelector(".list");
         data.hits.forEach((ree) => {
-            const image = document.createElement("img");
-            image.classList.add("image");
-            image.src = ree.webformatURL;
-            list.appendChild(image);
+            const img = document.createElement("img");
+            img.classList.add("image");
+            img.src = ree.webformatURL;
+            list.appendChild(img);
         });
     })
-    .catch(error => console.error('error:', error));
+    .catch(error => console.error(error));
 }
     getImages();
 
